@@ -87,8 +87,6 @@ if __name__ == "__main__":
                 try:
                     tokens = ptia.predict(path_imagen_completo)
                     etiqueta = ptia.caption_processor(tokens.tolist()[0])["caption"]
-                    # etiquetar imagen
-                    # TODO:
                     etiqueta_ingles = etiqueta
                     etiqueta_espaniol = translator.translate(etiqueta, dest='es', src='en').text  # .encode('utf8')
                     print(path_imagen_completo)
