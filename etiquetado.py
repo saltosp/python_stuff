@@ -55,7 +55,7 @@ if __name__ == "__main__":
     )'''
     connection = GetConn(
         "ec2-54-234-246-199.compute-1.amazonaws.com", "covid", "1q2w3_e4r5t*+{}",
-        'covid', 'virusImageHash', 'virusRevisar'
+        'admin', 'virusImageHash', 'virusRevisar'
     )
 
     translator = Translator()
