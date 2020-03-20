@@ -15,7 +15,7 @@ class GetConn(object):
     def __init__(self, host, username, password, authSource, coleccion_imagenes, coleccion_tweets):
         self.client = MongoClient(
             host=host, username=username, password=password,
-            authSource=authSource
+            authSource='admin'
         )
         self.database = authSource
         self.db = self.client[authSource]
@@ -55,7 +55,7 @@ if __name__ == "__main__":
     )'''
     connection = GetConn(
         "ec2-54-234-246-199.compute-1.amazonaws.com", "covid", "1q2w3_e4r5t*+{}",
-        'admin', 'virusImageHash', 'virusRevisar'
+        'covid', 'virusImageHash', 'virusRevisar'
     )
 
     translator = Translator()
